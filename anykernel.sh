@@ -32,12 +32,11 @@ no_magisk_check=1
 . tools/ak3-core.sh;
 
 ## Start boot install
-split_boot
-if [ -f "split_img/ramdisk.cpio" ]; then
-    unpack_ramdisk
-    write_boot
-else
-    flash_boot
-fi
+
+split_boot # Use split_boot to skip ramdisk unpack, e.g., for devices with init_boot ramdisk
+
+ui_print "- $(strings "${AKHOME}"/Image 2>/dev/null | grep -E -m1 'Linux version.*#' | awk '{print $3}')"
+
+flash_boot # Use flash_boot to skip ramdisk repack, e.g., for devices with init_boot ramdisk
 
 ## End boot install

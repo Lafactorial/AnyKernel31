@@ -23,7 +23,7 @@ supported.vendorpatchlevels=
 
 # boot shell variables
 block=boot
-is_slot_device=auto
+is_slot_device=1
 ramdisk_compression=auto
 patch_vbmeta_flag=auto
 no_magisk_check=1

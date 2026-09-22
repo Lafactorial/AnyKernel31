@@ -15,7 +15,7 @@ device.name2=garnet_in
 device.name3=garnetp
 device.name4=Redmi Note 13 Pro 5G
 device.name5=Poco X6 5G
-supported.versions=16
+supported.versions=
 supported.patchlevels=
 supported.vendorpatchlevels=
 '; } # end properties
